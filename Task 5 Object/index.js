@@ -240,3 +240,90 @@
 
 // 10. Rename some keys in an object using a mapping.
 
+// function renameKey() {
+    
+//     let obj = {
+//     car1 : "Bmw",
+//     car2 : "Xuv 700",
+//     car3 : "Dzire",         
+//     }
+
+//     let rename = Object.fromEntries(
+//         Object.entries(obj).map(([key, car1]) => {
+//             if(key == 'car1'){
+//                 return ['vehicle1', car1];
+//             }
+//             if(key == 'car2'){
+//                 return ['vehicle2', car1];
+//             }
+//             if(key == 'car3'){
+//                 return ['vehicle3', car1];
+//             }
+
+//             return [key, car1];
+//         })
+//     )
+//     return rename;
+// }
+
+// console.log(renameKey());
+
+// function renameKey() {
+    
+//     let obj = {
+//     car1 : "Bmw",
+//     car2 : "Xuv 700",
+//     car3 : "Dzire",         
+//     }
+
+//     let obj2 = {
+//         car1: "vehicle1",
+//         car2: "vehicle2",
+//         car3: "vehicle3"
+//     }
+
+//     return Object.fromEntries(
+//         Object.entries(obj).map(([key, value]) => 
+//             [obj2[key] || key, value]
+//     ));
+    
+// }
+
+// console.log(renameKey());
+
+// 11. Turn "a=1,b=2" into an object like { a: "1", b: "2" }.
+
+// function stringTobject() {
+    
+//     let str = "a=1,b=2";
+
+//     let res = Object.fromEntries(
+//         str.split(',').map(val => val.split('='))
+//     );
+//     return res;
+// }
+
+// console.log(stringTobject());
+
+// 12. Flatten one level of a nested object (e.g. { a: { b: 1 } } → { 'a.b': 1 }).
+
+function flattenOne() {
+    
+    let obj = { a: {b: 1} }
+    let res = {};
+
+    for(let key in obj){
+
+        if(typeof obj[key] === 'object' || obj[key] !== null){
+            for(let nestedKey in obj[key]){
+                res[`${key}.${nestedKey}`] = obj[key][nestedKey];
+            }
+        } else {
+            res[key] = obj[key];
+        }
+    }
+
+    return res;
+}
+
+console.log(flattenOne());
