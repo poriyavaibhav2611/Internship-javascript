@@ -307,23 +307,23 @@
 
 // 12. Flatten one level of a nested object (e.g. { a: { b: 1 } } → { 'a.b': 1 }).
 
-function flattenOne() {
+// function flattenOne() {
     
-    let obj = { a: {b: 1} }
-    let res = {};
+//     let obj = { a: {b: 1} }
+//     let res = {};
 
-    for(let key in obj){
+//     for(let key in obj){
 
-        if(typeof obj[key] === 'object' || obj[key] !== null){
-            for(let nestedKey in obj[key]){
-                res[`${key}.${nestedKey}`] = obj[key][nestedKey];
-            }
-        } else {
-            res[key] = obj[key];
-        }
-    }
+//         if(typeof obj[key] === 'object' || obj[key] !== null){
+//             for(let nestedKey in obj[key]){
+//                 res[`${key}.${nestedKey}`] = obj[key][nestedKey];
+//             }
+//         } else {
+//             res[key] = obj[key];
+//         }
+//     }
 
-    return res;
-}
+//     return res;
+// }
 
-console.log(flattenOne());
+// console.log(flattenOne());
