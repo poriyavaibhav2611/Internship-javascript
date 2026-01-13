@@ -200,5 +200,43 @@
 //     return obj1;
 // }
 
-// console.log(changeVal());
+// console.log(changeVal()); 
+
+// 8. Find the length of an array that’s inside an object like obj.friends.
+
+// function objLength() {
+    
+//     let obj = {
+//     car1 : "Bmw",
+//     car2 : "Xuv 700",
+//     car3 : "Dzire", 
+//     friends: ["Vaibhav", "Paras", "Sanjay"]
+//     }
+
+//     return obj.friends.length
+
+// }
+
+// console.log(objLength());
+
+// 9. Add a value to an array that’s inside an object.
+
+// function addVal(params) {
+    
+//     let obj = {
+//     car1 : "Bmw",
+//     car2 : "Xuv 700",
+//     car3 : "Dzire", 
+//     friends: ["Vaibhav", "Paras", "Sanjay"]
+//     }
+
+//     obj.friends[obj.friends.length] ="Virat"
+
+//     return obj.friends
+
+// }
+
+// console.log(addVal());
+
+// 10. Rename some keys in an object using a mapping.
 
