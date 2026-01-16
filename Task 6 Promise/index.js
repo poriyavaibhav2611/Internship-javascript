@@ -137,32 +137,26 @@
 // 	return new Promise((resolve,reject) => {
 // 		let pizza = true;
 
-// 		setTimeout(() => {
-// 			console.log("User placed an order");
-// 		},1000);
-
-// 		setTimeout(() => {
 // 			if(pizza == true){
-// 				resolve("Pizza is available");
+// 				setTimeout(() => {
+// 					console.log("User placed an order");
+// 				},1000);
+
+// 				setTimeout(() => {
+// 					resolve("Pizza is available");
+// 				},2000)
+
+// 				setTimeout(() => {
+// 					console.log("Process payment")
+// 				},3500);
+
+// 				setTimeout(() => {
+// 					console.log("Confirm order")
+// 				},5000)
 // 			}
 // 			else{
 // 				reject("Item not available");
 // 			}
-// 		},2000);
-
-// 		setTimeout(() => {
-// 			if(pizza == false){
-// 				return; // pizza nahi hai to aage nahi badhna
-// 			}
-// 			console.log("Process payment")
-// 		},1500);
-
-// 		setTimeout(() => {
-// 			if(pizza == false){
-// 				return; // pizza nahi hai to aage nahi badhna
-// 			}
-// 			console.log("Confirm order")
-// 		},5000)
 // 	})
 // }
 // pizzAvailable()
