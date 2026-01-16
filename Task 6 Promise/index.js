@@ -155,7 +155,7 @@
 // 				return; // pizza nahi hai to aage nahi badhna
 // 			}
 // 			console.log("Process payment")
-// 		},3500);
+// 		},1500);
 
 // 		setTimeout(() => {
 // 			if(pizza == false){
