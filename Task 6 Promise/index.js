@@ -132,11 +132,10 @@
 
 	// Step 4: Confirm order.
 
-
 // function pizzAvailable() {
 	
 // 	return new Promise((resolve,reject) => {
-// 		let pizza = true;
+// 		let pizza = false;
 
 // 		setTimeout(() => {
 // 			console.log("User placed an order");
