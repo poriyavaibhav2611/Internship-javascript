@@ -132,39 +132,39 @@
 
 	// Step 4: Confirm order.
 
-// function pizzAvailable() {
+function pizzAvailable() {
 	
-// 	return new Promise((resolve,reject) => {
-// 		let pizza = false;
+	return new Promise((resolve,reject) => {
+		let pizza = true;
 
-// 		setTimeout(() => {
-// 			console.log("User placed an order");
-// 		},1000);
+		setTimeout(() => {
+			console.log("User placed an order");
+		},1000);
 
-// 		setTimeout(() => {
-// 			if(pizza == true){
-// 				resolve("Pizza is available");
-// 			}
-// 			else{
-// 				reject("Item not available");
-// 			}
-// 		},2000);
+		setTimeout(() => {
+			if(pizza == true){
+				resolve("Pizza is available");
+			}
+			else{
+				reject("Item not available");
+			}
+		},2000);
 
-// 		setTimeout(() => {
-// 			if(pizza == false){
-// 				return;
-// 			}
-// 			console.log("Process payment")
-// 		},3500);
+		setTimeout(() => {
+			if(pizza == false){
+				return; // pizza nahi hai to aage nahi badhna
+			}
+			console.log("Process payment")
+		},3500);
 
-// 		setTimeout(() => {
-// 			if(pizza == false){
-// 				return;
-// 			}
-// 			console.log("Confirm order")
-// 		},5000)
-// 	})
-// }
-// pizzAvailable()
-// .then(msg => console.log(msg))
-// .catch(err => console.log(err));
+		setTimeout(() => {
+			if(pizza == false){
+				return; // pizza nahi hai to aage nahi badhna
+			}
+			console.log("Confirm order")
+		},5000)
+	})
+}
+pizzAvailable()
+.then(msg => console.log(msg))
+.catch(err => console.log(err));
